@@ -1,4 +1,4 @@
-CREATE TABLE toy_store (id INTEGER PRIMARY KEY, toys TEXT, price INTEGER, aisle INTEGER, age TEXT);
+CREATE TABLE toy_store (id INTEGER PRIMARY KEY, toys TEXT, price NUMERIC, aisle INTEGER, age TEXT);
 
 INSERT INTO toy_store VALUES (1, "Plush Toys", 10.99, 1, "Infant");
 INSERT INTO toy_store VALUES (2, "Learning Books", 25.99, 1, "Infant");
