@@ -1,0 +1,35 @@
+CREATE TABLE toy_store (id INTEGER PRIMARY KEY, toys TEXT, price INTEGER, aisle INTEGER, age TEXT);
+
+INSERT INTO toy_store VALUES (1, "Plush Toys", 10.99, 1, "Infant");
+INSERT INTO toy_store VALUES (2, "Learning Books", 25.99, 1, "Infant");
+INSERT INTO toy_store VALUES (3, "Ride-On Toys", 29.99, 1, "Infant");
+INSERT INTO toy_store VALUES (4, "Action Figures", 19.99, 2, "Toddler");
+INSERT INTO toy_store VALUES (5, "Play Set", 49.99, 2, "Toddler");
+INSERT INTO toy_store VALUES (6, "Dolls", 15.99, 2, "Toddler");
+INSERT INTO toy_store VALUES (7, "Stuffed Animals", 15.99, 2, "Toddler");
+INSERT INTO toy_store VALUES (8, "Building Sets", 19.99, 2, "Toddler");
+INSERT INTO toy_store VALUES (9, "Board Games", 24.99, 3, "Preschooler");
+INSERT INTO toy_store VALUES (10, "PLay-Doh", 16.99, 3, "Preschooler");
+INSERT INTO toy_store VALUES (11, "Barbie Doll", 10.99, 3, "Preschooler");
+INSERT INTO toy_store VALUES (12, "Role PLay Toys", 24.99, 3, "Preschooler");
+INSERT INTO toy_store VALUES (13, "Construction Play Set", 59.99, 3, "Preschooler");
+INSERT INTO toy_store VALUES (14, "Remote Controlled Car", 79.99, 4, "Middle Childhood");
+INSERT INTO toy_store VALUES (15, "Ceramic Craft Kit", 9.99, 4, "Middle Childhood");
+INSERT INTO toy_store VALUES (16, "Temporary Tattoos", 15.99, 4, "Middle Childhood");
+INSERT INTO toy_store VALUES (17, "Beauty Set", 14.99, 4, "Middle Childhood");
+INSERT INTO toy_store VALUES (18, "Lego Building Set", 69.99, 4, "Middle Childhood");
+INSERT INTO toy_store VALUES (19, "Nerf Guns", 25.99, 4, "Middle Childhood");
+INSERT INTO toy_store VALUES (20, "Board Games", 24.99, 4, "Middle Childhood");
+INSERT INTO toy_store VALUES (21, "Puzzles", 15.99, 4, "Middle Childhood");
+INSERT INTO toy_store VALUES (22, "Science Lab", 19.99, 4, "Middle Childhood");
+
+Displayed the database ordered by price.
+SELECT * FROM toy_store ORDER BY price;
+
+Total profit if one item in store is sold.
+SELECT SUM(price) FROM toy_store;
+
+Total profit accumulated in specified age group.
+SELECT age, SUM(price) FROM toy_store GROUP BY age;
+
+
